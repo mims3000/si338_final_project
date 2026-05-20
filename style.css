@@ -1,0 +1,52 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:#F0E4D7;
+    color: #250e09;
+}
+
+header{
+    color: #250e09;
+    justify-content: left;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Georgia, serif;
+  background-color: #f7f4ef;
+  color: #250e09;
+  line-height: 1.7;
+}
+
+
+/* TAB NAVIGATION */
+.tab {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* TAB LINKS */
+.tab a {
+  text-decoration: none;
+  color: #222;
+
+  background-color: #dce4ff;
+
+  padding: 20px 20px;
+
+  border-radius: 20px 20px 0 0;
+
+  border: 3.5px solid #54261E;
+
+  transition: 0.3s;
+
+  font-weight: bold;
+}
