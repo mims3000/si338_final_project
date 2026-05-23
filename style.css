@@ -1,44 +1,281 @@
-body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color:#F0E4D7;
-    color: #250e09;
-    background-image: url('../images/homepage_background.png');
-    background-repeat: no-repeat;
-    background-position: 55% 27%;
+/* styles.css */
+body {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: larger;
 }
+
+header {
+    position: relative; 
+    top: 20px; 
+    color: #250e09;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: left;
+    max-width: 100%; 
+    box-sizing: border-box;
+    font-family: "SN Pro", sans-serif;
+    z-index: 10; /* Keep above other content */
+	margin: 10px auto;
+	line-height: 1;
+	width:90%;
+}
+
+.navbar-custom{
+    font-family: "SN Pro", sans-serif;
+	background-color: #f0f8ff;
+	color:#250e09;
+	padding: 0.5em 1em;
+    -align: left;
+	margin: 0 auto;	
+  	display: flex;
+  	gap: 1rem;
+  	flex-wrap: wrap;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Ensures background image doesn't overflow */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    z-index: -1; /* Places the background behind the grid */
+}
+
+#home.background-image{
+	background-image: url('images/homepage_w_sticker.png');
+}
+
+#arch-gardens.background-image{
+	background-image: url('images/arch_gardens_background.png');
+}
+
+
+/* Grid Layout for 4 Containers */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 70px 150px; 
+    width: 90%;
+    max-width: 800px;
+    height: 80vh;
+	margin: 0 auto;
+    padding: 100px 50px 100px 50px;
+    box-sizing: border-box;
+}
+
+/* Container Styling (Clickable) */
+.image-container {
+    position: relative;
+    display: block; /* Ensures the <a> tag behaves like a block element */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures images don't overflow the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    text-decoration: none; /* Removes underline from links */
+    font-family: "SN Pro", sans-serif;
+}
+
+.image-container:hover {
+    transform: translateY(-5px); /* Lifts the container slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Text*/
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-title{
+	font-size: x-large;
+	font-family: "SN Pro", sans-serif;
+	margin:0;
+}
+
+.card-text{
+	display:flex;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        grid-template-rows: repeat(4, 1fr); /* 4 rows on mobile */
+        height: auto;
+        padding: 10px;
+		gap: 5px 5px;
+    }
+
+    .image-container {
+        height: 200px; /* Fixed height for mobile */
+    }
+
+	#home.background-image {
+    	background-image: url('images/single_page_mobile.png');
+	}
+
+	#arch-gardens.background-image{
+		background-image: url('images/arch_gardens_mobile.png')
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: 0.05s ease-in;
+	/*DIMENSIONS
+	--dim1: 11vw;
+	--dim2: 0.5vw;
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #250e09;
+}
+
+.background-image{
+		background-image: url('../images/homepage_background.png');
+		background-repeat:no-repeat;
+		background-size: cover;
+		background-position: center;
+		margin: auto;
+		width: 100%;
+		min-height: 100vh; 
+		position:relative;
+}
+
+.container{
+	display:grid;
+	width: 90%;
+    max-width: 800px;
+    margin: auto;
+    background: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ccc;
+    overflow: visible; Important: sticky won't work if overflow is hidden 
+}
+
+header {
+    position: sticky; /* Sticks inside container 
+    top: 20px; /* Distance from top of viewport while scrolling 
+    background: white;
+    color: #250e09;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 100%; /* Fully responsive inside container 
+    box-sizing: border-box;
+    font-family: "SN Pro", sans-serif;
+    z-index: 10; /* Keep above other content 
+	margin: 10px auto;
+	width:90%;
+
 
 header{
+	position:fixed;
+	top: 30px;             /* Distance from top 
+    left: 10%;             /* Center horizontally 
     color: #250e09;
-    justify-content: left;
-    margin: 5px;
-    padding: 9px;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 1.2rem;      /* Scales with root font size 
+    text-align: left;
+    max-width: 90%;         /* Prevent overflow on small screens 
+    box-sizing: border-box;
+    margin: auto;
+    font-family: "SN Pro", sans-serif;
+	font-size: 200%;
 }
 
-
-/* BODY */
-body {
-  font-family: Georgia, serif;
-  background-color: #f7f4ef;
-  color: #250e09;
-  line-height: 1.7;
+#skip{
+  position:absolute;
+  top:-100px;
 }
 
-
-/* TAB NAVIGATION */
+TAB NAVIGATION
 .tab {
   display:flex;
-  justify-content: right;
   gap: 10px;
-  margin-bottom: 20px;
+  padding: 60px 10px 28px 29px;
+  justify-content: center;
+  flex-wrap:wrap;
 }
 
-/* TAB LINKS */
+TAB LINKS
 .tab a {
   text-decoration: none;
   color: #222;
-
   background-color: #dce4ff;
-
   padding: 20px 20px;
 
   border-radius: 20px 20px 0 0;
@@ -48,189 +285,36 @@ body {
   transition: 0.3s;
 
   font-weight: bold;
+
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	transition: 0.05s ease-in;
-	/*DIMENSIONS*/
-	--dim1: 11vw;
-	--dim2: 0.5vw;
+
+MEDIA QUERIES
+@media screen and (max-width:768px){
+	.background-image{
+		min-height: 60vh;
+		background-attachment: scroll;
+		width:90%;
+	}
+	#skip:focus{
+		top:10px;
+		left:45%;
+  	}
+
+  .tab{
+      justify-content: center;
+      flex-direction: column;
+  }
 }
 
-/*LIBRARY*/
-#title > h1 {
-	font-family: Roboto, sans-serif;
-	font-size: 5vw;
+@media screen and (min-width: 768px) {
+    #skip:focus {
+        top: 10px;
+        left: 45%;
+    }
+    .tab {
+        justify-content: right;
+        flex-direction: row;
+    }
 }
-#title > p {
-	font-family: Heebo, sans-serif;
-	font-size: 2vw;
-}
-.calendar-frame {
-	padding: var(--dim2);
-	width: 84vw;
-	margin: auto;
-	flex-wrap: wrap;
-}
-.day-frame {
-	margin: var(--dim2);
-	height: var(--dim1);
-	width: var(--dim1);
-}
-.day-number {
-	font-family: Roboto, sans-serif;
-	font-size: 3.5vw;
-	text-shadow: 0 0 1vw rgba(0, 0, 0, 0.25);
-  text-align: top left;
-}
-.day-label {
-	width: var(--dim1);
-	position: absolute;
-	color: rgba(255, 255, 255, 0);
-	background-color: rgba(0, 0, 0, 0);
-	font-size: 1vw;
-	font-family: Heebo, sans-serif;
-}
-
-.day-week{
-	margin: var(--dim2);
-	height: var(--dim1);
-	width: var(--dim1);
-}
-
-.real:hover > .day-label {
-	color: rgba(255, 255, 255, 1);
-	background-color: rgba(0, 0, 0, 0.5);
-}
-.real {
-	background-color: black;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: white;
-}
-.real:hover {
-	transform: scale(1.1, 1.1);
-}
-.real:hover > .day-number {
-	color: rgba(0, 0, 0, 0);
-	text-shadow: 0 0 10vw rgba(0, 0, 0, 0);
-}
-.center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-/*DAYS*/
-#one {
-  background-position: center;
-}
-#two {
-	background-position: center;
-}
-#three {
-  background-image: url('../images/plane_map_dublin.png');
-	background-position: center;
-}
-#four {
-  background-image: url('../images/brazen_head_sign.png');
-	background-position: center;
-}
-#five {
-  background-image: url('../images/irish_wolfhounds.JPG');
-	background-position: left center;
-}
-#six {
-	background-image: url("https://images.unsplash.com/photo-1615361200098-9e630ec29b4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
-	background-position: left center;
-}
-#seven {
-	background-image: url("https://images.unsplash.com/photo-1628863353691-0071c8c1874c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-	background-position: center;
-}
-#eight {
-	background-image: url("https://images.unsplash.com/photo-1539626845749-3d350356324c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-	background-position: center;
-}
-#nine {
-	background-image: url("https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80");
-	background-position: center;
-}
-#ten {
-	background-image: url("https://images.unsplash.com/photo-1517398629-9d24ea1f4f94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-	background-position: left bottm;
-}
-#eleven {
-	background-image: url("https://images.unsplash.com/photo-1581093196867-ca3dba3c721b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-	background-position: center;
-}
-#twelve {
-	background-image: url("https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1459&q=80");
-	background-position: center;
-}
-#thirteen {
-	background-image: url("https://images.unsplash.com/photo-1619528395742-4e41ab87403b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=881&q=80");
-	background-position: center;
-}
-#fourteen {
-	background-image: url("https://images.unsplash.com/photo-1585768750637-ada36319a484?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
-	background-position: center;
-}
-#fifteen {
-	background-image: url("https://images.unsplash.com/photo-1588756264692-d396bca41fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-	background-position: center;
-}
-#sixteen {
-	background-image: url("https://images.unsplash.com/photo-1583259901105-387e69091d51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-	background-position: center bottom;
-}
-#seventeen {
-	background-image: url("https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80");
-	background-position: center;
-}
-#eighteen {
-	background-image: url("https://images.unsplash.com/photo-1608224873587-81ee37394b4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
-	background-position: center top;
-}
-#nineteen {
-	background-image: url("https://images.unsplash.com/photo-1636450525985-f38e86fd4759?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-	background-position: center;
-}
-#twenty {
-	background-image: url("https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
-	background-position: center bottom;
-}
-#twenty-one {
-	background-image: url("https://images.unsplash.com/photo-1577942948749-a3dbb5c6db0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-	background-position: center;
-}
-#twenty-two {
-	background-image: url("https://images.unsplash.com/photo-1613931507118-955a5f42e1c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
-	background-position: center;
-}
-#twenty-three {
-	background-image: url("https://images.unsplash.com/photo-1573504816327-07f3bf7accac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-	background-position: center;
-}
-#twenty-four {
-	background-image: url("https://images.unsplash.com/photo-1497581175344-8a5f1a0142a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80");
-	background-position: center top;
-}
-#twenty-five {
-	background-image: url("https://images.unsplash.com/photo-1593980235000-5cf185e8df10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
-	background-position: center;
-}
-#twenty-six {
-	background-image: url("https://images.unsplash.com/photo-1551238875-13b9d38454db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1026&q=80");
-	background-position: center;
-}
-#twenty-seven {
-	background-image: url("https://images.unsplash.com/photo-1589656966895-2f33e7653819?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-	background-position: center;
-}
-#twenty-eight {
-	background-image: url("https://images.unsplash.com/photo-1601708832940-425f2c21957c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-	background-position: center;
-}
+*/
