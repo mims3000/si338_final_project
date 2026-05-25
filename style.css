@@ -20,6 +20,7 @@ body{
 /*Homepage Styling*/
 #homepage h1{
     font-size: 800%;
+    margin: 0px;
 }
 
 .lotus-container {
@@ -45,8 +46,8 @@ h2{
 
 /* Navbar Customization*/
 .navbar{
-    background-color: #c2e5ae;
-    padding: 30px 0;
+    background-color: #dce4ff;
+    padding: 60px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -67,7 +68,7 @@ h2{
     text-decoration: none;
     font-family: "SN Pro", sans-serif;
     font-weight: bold;
-    font-size: large;
+    font-size: 150%;
     transition: color 0.3s;
     padding: 5px 10px;
     border-radius: 5px;
@@ -84,7 +85,7 @@ h2{
     color: #250e09;
     font-family: "SN Pro", sans-serif;
     font-weight: bold;
-    font-size: large;
+    font-size: 150%;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -100,7 +101,7 @@ h2{
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #d5f5c2;
+    background-color: #dce4ff;
     position: absolute;
     width: 200px;
     border-radius: 5px;
@@ -118,7 +119,7 @@ h2{
     padding: 10px 15px;
     display: block;
     transition: background-color 0.3s;
-    font-size: large;
+    font-size: 150%;
 }
 
 .dropdown-menu li a:hover {
@@ -169,10 +170,71 @@ h2{
 
 
 /*Media Queries & Mobile Responsiveness*/
-@media (max-width: 768px) {
+
+/* MOBILE MEDIA QUERY*/
+@media screen and (max-width: 768px){
+    #homepage h1{
+        font-size: 500%;
+        justify-content: center;
+    }
     .lotus-image {
         width: 100%;
         height:auto;
         margin-bottom: 50%;
+    }
+    .hamburger{
+        display: block;
+        padding-left: 90px;
+    }
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-green);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+    .nav-links li{
+        width: 100%;
+        background-color: white;
+
+    }
+    .nav-links a{
+        display: block;
+        padding: 1rem 2rem;
+        background-color: white;
+        border-radius: 0;
+    }
+    #menu-toggle:checked ~ .nav-links{
+        display: flex;
+    }
+    .dropdown-menu{
+        position: static;
+        display: block;
+        background-color: white;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .dropdown-menu a{
+        color: red;
+        padding-left: 3rem;
+    }
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus-visible{
+        background-color: var(--orange);
+        color: var(--cream);
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        align-content:center;
+    }
+    .container img{
+        border-radius: 3px;
+        width:100%;
+        border:#f0f8ff;
     }
 }
