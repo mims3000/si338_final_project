@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aran Islands</title>
+    <link rel="icon" type="image/x-icon" href="/images/lotus_favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to Main Content</a>
+
+
+    <nav class="navbar">
+        <!-- Add a proper label for accessibility -->
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle menu">
+        <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
+
+        <ul class="nav-links">
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Historical Architecture & Gardens ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="malahide.html" tabindex="0" role="menuitem">Malahide</a></li>
+                    <li><a href="st_annes.html" tabindex="0" role="menuitem">St. Anne's Park</a></li>
+                    <li><a href="killruddery.html" tabindex="0" role="menuitem">Killruddery</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Cliffs & Hikes ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="aran_islands.html" tabindex="0" role="menuitem">Aran Islands</a></li>
+                    <li><a href="cliffs_moher.html" tabindex="0" role="menuitem">Cliffs of Moher</a></li>
+                    <li><a href="wicklow.html" tabindex="0" role="menuitem">Wicklow</a></li>
+                </ul>
+            </li>
+            <li><a href="food.html" tabindex="0">Food</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main">
+    <section id="overview">
+        <div class="container">
+            <img src="images/group_selfie_ferry.png" alt="Olivia, Tasnimah, and Camila (left to right) on top floor of ferry to Aran Islands">
+            <div class="text-container">
+                <header>
+                    <h1>Aran Islands</h1>
+                </header>
+            </div>
+        </div>    
+    </section>
+
+    <section id="overview">
+        <div class="container">
+            <div class="text-container">
+                <h2>
+                    Multimodal transportation. Rocky in multiple ways.
+                </h2>
+                <p>
+                    The weekend of our class trip to Galway, Olivia, Tasnimah, Arden, and I went across the way to the Aran Islands. Getting around entailed a ferry ride and bike rentals, andw e specifically went to Inis Mór. I hiked towards Dún Aonghasa, a prehistoric hill fort, and the view of the water from the highest cliff was amazing! The spots of aqua blue were mesmerizing even though I was a bit scared to get too close to the edge.</p>
+                </p>
+            </div>
+            <img src="images/dún_aonghasa_horizontal.JPG" alt="Cliff and vibrant blue ocean view from Dún Aonghasa">
+        </div>    
+    </section>
+    </main>
+</body>
+</html>
