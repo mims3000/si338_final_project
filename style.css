@@ -18,7 +18,7 @@ body{
     top: -40px;
     left: 0;
     background: #ffffff;
-    color: #fefefe;
+    color: #000000;
     padding: 0.5rem 1rem;
     z-index: 10000;
     transition: top 0.3s ease;
@@ -28,7 +28,7 @@ body{
 /*Move into view when in focus*/
 .skip-link:focus {
     top: 0;
-}   
+} 
 
 /*Homepage Styling*/
 #homepage h1{
@@ -51,17 +51,17 @@ body{
     object-fit: cover; 
 }
 
-
 h2{
     font-family: "SN Pro", sans-serif;
-
 }
 
+/*Link styling*/
 a{
     text-decoration-color: #442dad;
     text-decoration-thickness: 3px;
     color:#250e09;
 }
+
 a:hover{
     border-radius: 3px;
     border:#250e09;
@@ -202,30 +202,59 @@ a:visited {
     font-weight: 530;
 }
 
-/*Food gallery and filtering*/
-.food-container{
-    display: grid;
-    width: 100%;
+/* Food Gallery Section */
+#gallery {
+    padding: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
 }
-.food-container > div{
+
+/* Filter Buttons */
+.buttonindex {
+    background-color:white;
+    color:#250e09;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'SN Pro', sans-serif;
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: large;
+}
+
+/* Food Container Grid */
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.mix {
+    border-radius: 3px;
     overflow: hidden;
-} 
-.food-container img {
+}
+
+.mix:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mix img {
     width: 100%;
-    height: 50%;
-    object-fit: contain;
-    margin: auto;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
-.food-container p{
-    margin:0px;
-    margin-bottom: 14px;
+
+.image-caption {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+    color:#250e09;
 }
-.food-container img:hover, .containerIndex img:focus {
-    transform:scale(1.5);
-}
+
 
 /*Media Queries & Mobile Responsiveness*/
 @media screen and (max-width: 768px){
@@ -274,10 +303,6 @@ a:visited {
         box-shadow: none;
         border-radius: 0;
     }
-    .dropdown-menu a{
-        color: red;
-        padding-left: 3rem;
-    }
     .dropdown-menu a:hover,
     .dropdown-menu a:focus-visible{
         background-color: var(--orange);
@@ -294,11 +319,3 @@ a:visited {
         gap: 20px;
     }
 }
-
-
-
-
-
-
-
-
