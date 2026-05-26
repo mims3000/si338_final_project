@@ -12,49 +12,54 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to Main Content</a>
+
+    <nav class="navbar">
+        <!-- Add a proper label for accessibility -->
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle menu">
+        <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
+
+        <ul class="nav-links">
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Historical Architecture & Gardens ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="malahide.html" tabindex="0" role="menuitem">Malahide</a></li>
+                    <li><a href="st_annes.html" tabindex="0" role="menuitem">St. Anne's Park</a></li>
+                    <li><a href="killruddery.html" tabindex="0" role="menuitem">Killruddery</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Cliffs & Hikes ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="aran_islands.html" tabindex="0" role="menuitem">Aran Islands</a></li>
+                    <li><a href="cliffs_moher.html" tabindex="0" role="menuitem">Cliffs of Moher</a></li>
+                    <li><a href="wicklow.html" tabindex="0" role="menuitem">Wicklow</a></li>
+                </ul>
+            </li>
+            <li><a href="food.html" tabindex="0">Food</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
     <header>
         <h1>Annie Lee Tower Bridge</h1>
     </header>
 
-    <nav class="navbar">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
-        <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-            <span class="dropdown-header">Historical Architecture & Gardens ▾</span>
-            <ul class="dropdown-menu">
-                <li><a href="malahide.html">Malahide</a></li>
-                <li><a href="st_annes.html">St. Anne's Park</a></li>
-                <li><a href="killruddery.html">Killruddery</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <span class="dropdown-header">Cliffs & Hikes ▾</span>
-            <ul class="dropdown-menu">
-                <li><a href="aran_islands.html">Aran Islands</a></li>
-                <li><a href="cliffsofmoher.html">Cliffs of Moher</a></li>
-                <li><a href="wicklow.html">Wicklow</a></li>
-            </ul>
-        </li>
-        <li><a href="food.html">Food</a></li>
-        <li><a href="gallery.html">Image Gallery</a></li>
-        </ul>
-    </nav>
-        
     <section id="overview">
         <div class="container">
             <div class="text-container">
                 <h2>Impromptu visit. Ended up being a longer stay.</h2>
                 <p> 
-                    Fun pit stop after a class visit to the Irish Wheelchair Association (IWA). Arden and I walked to the nearby St. Anne's Park and had a photoshoot on the Annie Lee Tower Bridge. Apparently, it is a sham ruin that was constructed in 1839 by Benjamin Lee Guinness to celebrate his daughter Annie Lee's birth!
+                    Fun pit stop after a class visit to the Irish Wheelchair Association (IWA) on May 12th. Arden and I walked to the nearby St. Anne's Park and had a photoshoot on the <a href="https://www.buildingsofireland.ie/buildings-search/building/50030023/annie-lee-tower-and-bridge-st-annes-park-raheny-dublin-5-co-dublin">Annie Lee Tower Bridge</a>. Apparently, it is a sham ruin that was constructed in 1839 by Benjamin Lee Guinness to celebrate his daughter Annie Lee's birth!
                 </p>
             </div>
-            <img src="images/cami_with_tower_bridge.JPG">
-            <img src="images/cami_in_tower.JPG">
+            <img src="images/cami_with_tower_bridge.JPG" alt="Camila in front of Annie Lee Tower Bridge, looking back at camera">
+            <img src="images/cami_in_tower.JPG" alt="Camila sitting inside Annie Lee Tower window">
         </div>
-
     </section>
-
+    </main>
 </body>
 </html>

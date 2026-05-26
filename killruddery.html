@@ -12,35 +12,41 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to Main Content</a>
+
+    <nav class="navbar">
+        <!-- Add a proper label for accessibility -->
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle menu">
+        <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
+
+        <ul class="nav-links">
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Historical Architecture & Gardens ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="malahide.html" tabindex="0" role="menuitem">Malahide</a></li>
+                    <li><a href="st_annes.html" tabindex="0" role="menuitem">St. Anne's Park</a></li>
+                    <li><a href="killruddery.html" tabindex="0" role="menuitem">Killruddery</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Cliffs & Hikes ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="aran_islands.html" tabindex="0" role="menuitem">Aran Islands</a></li>
+                    <li><a href="cliffs_moher.html" tabindex="0" role="menuitem">Cliffs of Moher</a></li>
+                    <li><a href="wicklow.html" tabindex="0" role="menuitem">Wicklow</a></li>
+                </ul>
+            </li>
+            <li><a href="food.html" tabindex="0">Food</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
     <header>
         <h1>Killruddery House & Gardens</h1>
     </header>
-
-    <nav class="navbar">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
-        <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-            <span class="dropdown-header">Historical Architecture & Gardens ▾</span>
-            <ul class="dropdown-menu">
-                <li><a href="malahide.html">Malahide</a></li>
-                <li><a href="st_annes.html">St. Anne's Park</a></li>
-                <li><a href="killruddery.html">Killruddery</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <span class="dropdown-header">Cliffs & Hikes ▾</span>
-            <ul class="dropdown-menu">
-                <li><a href="aran_islands.html">Aran Islands</a></li>
-                <li><a href="cliffsofmoher.html">Cliffs of Moher</a></li>
-                <li><a href="wicklow.html">Wicklow</a></li>
-            </ul>
-        </li>
-        <li><a href="food.html">Food</a></li>
-        <li><a href="gallery.html">Image Gallery</a></li>
-        </ul>
-    </nav>
         
     <section id="overview">
         <div class="container">
@@ -50,11 +56,19 @@
                     
                 </p>
             </div>
-            <img src="images/killruddery_house_view_tea_room.JPG" width="300">
-            <img src="images/killruddery_sunken_garden.JPG" width="300">
+            <img src="images/killruddery_house_view_tea_room.JPG" alt="Killruddery dome-like orangery view from Tea Room seating area">
         </div>
 
+         <div class="container">
+            <div class="text-container">
+                <h2>Interesting vibes. Beautiful scenery.</h2>
+                <p> 
+                    
+                </p>
+            </div>
+                <img src="images/killruddery_sunken_garden.JPG" alt="Sunken garden with orange walled bushes and pond with statue at center">
+        </div>
     </section>
-
+    </main>
 </body>
 </html>
