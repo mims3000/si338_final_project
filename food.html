@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malahide Castle & Gardens</title>
+    <link rel="icon" type="image/x-icon" href="/images/lotus_favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to Main Content</a>
+
+    <nav class="navbar">
+        <!-- Add a proper label for accessibility -->
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle menu">
+        <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
+
+        <ul class="nav-links">
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Historical Architecture & Gardens ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="malahide.html" tabindex="0" role="menuitem">Malahide</a></li>
+                    <li><a href="st_annes.html" tabindex="0" role="menuitem">St. Anne's Park</a></li>
+                    <li><a href="killruddery.html" tabindex="0" role="menuitem">Killruddery</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Cliffs & Hikes ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="aran_islands.html" tabindex="0" role="menuitem">Aran Islands</a></li>
+                    <li><a href="cliffs_moher.html" tabindex="0" role="menuitem">Cliffs of Moher</a></li>
+                    <li><a href="wicklow.html" tabindex="0" role="menuitem">Wicklow</a></li>
+                </ul>
+            </li>
+            <li><a href="food.html" tabindex="0">Food</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+    <section id="gallery">
+        <h2>Food</h2>
+        <button type="button" class = "buttonindex" data-filter="all">All</button>
+        <button type="button" class = "buttonindex" data-filter=".cafes">Cafés</button>
+        <button type="button" class = "buttonindex" data-filter=".restaurants">Restaurants</button>
+
+    <div class="food-container">
+        <div class="mix cafes">
+            <img src="images/one_kinda_folk_focaccia.jpg" alt="Selfie on a bus with about 10 people" tabindex="0">
+            <div class="image-caption">Bus Tour</div>
+        </div>
+
+        <div class="mix restaurants">
+            <img src="images/ginos_crepe_gelato.jpg" alt="Building tower with clock and weathervane" tabindex="0">
+            <div class="image-caption">Griffith Spire</div>
+        </div>
+
+        <div class="mix restaurants">
+            <img src="images/sushida_roll.JPG" alt="Plate of eel and prawn Sushida sushi roll "tabindex="0">
+            <div class="image-caption">Sushida Roll</div>
+        </div>
+
+        <div class="mix restaurants">
+            <img src="images/roast_of_the_day_wicklow_pub.JPG" alt="Table after lunch with empty plates and glasses" tabindex="0">
+            <div class="image-caption">Fumbally Cafe Table</div>
+        
+        </div>
+                <div class="mix restaurants">
+            <img src="images/daata_feast.JPG" alt="Table after lunch with empty plates and glasses" tabindex="0">
+            <div class="image-caption">Fumbally Cafe Table</div>
+        </div>
+
+        <div class="mix cafes">
+            <img src="images/bread41_chai.JPG" alt="Chai latte adjacent to self-serve milk and sugar station" tabindex="0">
+            <div class="image-caption">Bus Tour</div>
+        </div>
+
+        <div class="mix restaurants">
+            <img src="images/the_garden_pizza.JPG" alt="The Garden pizza from Killruddery House and Gardens" tabindex="0">
+            <div class="image-caption">Fumbally Cafe Table</div>
+        </div>   
+
+        <div class="mix cafes">
+            <img src="images/killruddery_hot_chocolate.JPG" alt="Chai latte adjacent to self-serve milk and sugar station"tabindex="0">
+            <div class="image-caption">Bus Tour</div>
+        </div>
+
+        <div class="mix cafes">
+            <img src="images/fairhill_coffee_cake.JPG" alt="Chai latte adjacent to self-serve milk and sugar station"tabindex="0">
+            <div class="image-caption">Bus Tour</div>
+        </div>
+
+        <div class="mix cafes">
+            <img src="images/the_secret_garden_chai.JPG" alt="Chai latte adjacent to self-serve milk and sugar station"tabindex="0">
+            <div class="image-caption">The Secret Garden Housemade Chai latte</div>
+        </div>
+
+        <div class="mix cafes">
+            <img src="images/sakura_matcha_omma.JPG" alt="Chai latte adjacent to self-serve milk and sugar station"tabindex="0">
+            <div class="image-caption">The Secret Garden Housemade Chai latte</div>
+        </div>
+
+        <div class="mix restaurants">
+            <img src="images/beef_brisket_pho.JPG" alt="Bowl of Irish beef brisket pho from Madame Pho and basket of fries" tabindex="0">
+            <div class="image-caption">Fumbally Cafe Table</div>
+        </div>  
+    </div>
+    </section>
+    </main>
+        <script src="mixitup.js"></script>
+
+        <script>
+            var containerEl = document.querySelector('.food-container');
+
+            var mixer = mixitup(containerEl);
+        </script>
+</body>
+</html>

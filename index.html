@@ -12,48 +12,59 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main">Skip to Main Content</a>
 
     <nav class="navbar">
-        <input type="checkbox" id="menu-toggle">
+        <!-- Add a proper label for accessibility -->
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle menu">
         <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
+
         <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-            <span class="dropdown-header">Historical Architecture & Gardens ▾</span>
-            <ul class="dropdown-menu">
-                <li><a href="malahide.html">Malahide</a></li>
-                <li><a href="st_annes.html">St. Anne's Park</a></li>
-                <li><a href="killruddery.html">Killruddery</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <span class="dropdown-header">Cliffs & Hikes ▾</span>
-            <ul class="dropdown-menu">
-                <li><a href="aran_islands.html">Aran Islands</a></li>
-                <li><a href="cliffsofmoher.html">Cliffs of Moher</a></li>
-                <li><a href="wicklow.html">Wicklow</a></li>
-            </ul>
-        </li>
-        <li><a href="food.html">Food</a></li>
-        <li><a href="gallery.html">Image Gallery</a></li>
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Historical Architecture & Gardens ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="malahide.html" tabindex="0" role="menuitem">Malahide</a></li>
+                    <li><a href="st_annes.html" tabindex="0" role="menuitem">St. Anne's Park</a></li>
+                    <li><a href="killruddery.html" tabindex="0" role="menuitem">Killruddery</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <!-- Add tabindex and role="button" for keyboard accessibility -->
+                <span class="dropdown-header" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">Cliffs & Hikes ▾</span>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="aran_islands.html" tabindex="0" role="menuitem">Aran Islands</a></li>
+                    <li><a href="cliffs_moher.html" tabindex="0" role="menuitem">Cliffs of Moher</a></li>
+                    <li><a href="wicklow.html" tabindex="0" role="menuitem">Wicklow</a></li>
+                </ul>
+            </li>
+            <li><a href="food.html" tabindex="0">Food</a></li>
         </ul>
     </nav>
 
-    <section id="homepage">
-        <header>
-            <h1>Welcome</h1>
-        </header>
-        <div class="lotus-container">
-            <img src="images/canva_blossoming_lotus.svg" class="lotus-image" alt="Dark green blossoming lotus outline from Canva">
-        </div>
-    </section>
+    <main id="main">
+        <section id="homepage">
+            <header>
+                <h1>Welcome</h1>
+                <h2>to my study abroad experience in Ireland</h2>
+            </header>
+            <div class="lotus-container">
+                <img src="images/canva_blossoming_lotus.svg" class="lotus-image" alt="Dark green blossoming lotus outline from Canva">
+            </div>
+        </section>
 
+        <section id="about">
+            <h2>About the Trip & Me!</h2>
+                <div class="container">
+                <img src="images/cami_cliffs_of_moher.JPG"alt="Camila in front of Cliffs of Moher">
+                <div class="text-container">
+                    <p>
+                    </p>
+                </div>
+        </section>
+    </main>
 
-    <section id="about">
-        <h2>About the Trip & Me!</h2>
-        <p>Hi. My name is Camila Nedeff. I am a rising senior at the University of Michigan, and I am studying Neuroscience and Food/Agriculture. Studying web accessibility and development in Ireland has come with a learning curve</p>
-    </section>
-    
 </body>
 </html>
+
